@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: "Times New Roman", sans-serif;
+}
+
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-header {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.form-student-info {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateY(-10px);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form-group label {
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #45a049;
+}

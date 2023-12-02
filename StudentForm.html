@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Student Form</title>
+    <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
-<h1>Student Form</h1>
+<div class="form">
+    <div class="form-header">
+        <h1>Student Form</h1>
+    </div>
+    <div class="form-student-info">
+        <form action="Student.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Number:</label>
+                <input type="number" id="number" name="number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="program">Program:</label>
+                <input type="text" id="program" name="program" required>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>
