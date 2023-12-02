@@ -5,7 +5,7 @@
  * @date: 01/12/2023
  */
 
-class Student
+class student_class
 {
     private string $name;
     private int $number;
