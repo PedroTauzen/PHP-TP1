@@ -88,5 +88,17 @@ class Student
 
         echo '</table>';
     }
+
+    public function subjectGradesAverage($subjectGrade) {
+        if (empty($subjectGrade)) {
+            return 0;
+        }
+
+        $totalGrades = 0;
+        foreach ($subjectGrade as $grade) {
+            $totalGrades += $grade['subjectGrade'];
+        }
+        return $totalGrades / count($subjectGrade);
+    }
 }
 
