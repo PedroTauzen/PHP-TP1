@@ -1,41 +1,38 @@
-body {
-    margin: 0;
-    font-family: "Times New Roman", sans-serif;
-}
-
-.form {
+form {
     max-width: 400px;
     margin: 0 auto;
+    padding: 10px;
 }
 
-.form-header {
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-}
-
-.form-student-info {
+.card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transform: translateY(-10px);
-    margin-bottom: 20px;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+h1 {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    margin: 0;
+    border-radius: 10px;
 }
 
-.form-group label {
-    text-align: left;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+label {
+    display: block;
     margin-bottom: 8px;
 }
 
-.form-group input {
+input {
     width: 100%;
     padding: 8px;
     margin-bottom: 12px;
@@ -44,12 +41,12 @@ body {
     border-radius: 4px;
 }
 
-.form-group input[type="submit"] {
+input[type="submit"] {
     background-color: #4caf50;
     color: white;
     cursor: pointer;
 }
 
-.form-group input[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: #45a049;
 }

@@ -6,30 +6,27 @@
     <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
-<div class="form">
-    <div class="form-header">
-        <h1>Student Form</h1>
-    </div>
-    <div class="form-student-info">
-        <form action="Student.php" method="post">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="number">Number:</label>
-                <input type="number" id="number" name="number" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="program">Program:</label>
-                <input type="text" id="program" name="program" required>
-            </div>
-        </form>
-    </div>
-</div>
+<form action="Student.php" method="post" class="card">
+    <h1>Student Form</h1>
+    <table>
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" id="name" name="name" required></td>
+        </tr>
+        <tr>
+            <td><label for="number">Number:</label></td>
+            <td><input type="number" id="number" name="number" required></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td><label for="program">Program:</label></td>
+            <td><input type="text" id="program" name="program" required></td>
+        </tr>
+    </table>
+
+</form>
 </body>
 </html>
