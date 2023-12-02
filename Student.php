@@ -67,5 +67,26 @@ class Student
     {
         return $this->subjectList;
     }
+
+    public function printStudentSubjects($subjectList)
+    {
+        if (empty($subjectList)) {
+            echo 'No subjects available in the list';
+            return;
+        }
+
+        echo '<table border="1">';
+        echo '<tr><th>Subject</th><th>Grade</th><th>Status</th></tr>';
+
+        foreach ($subjectList as $subject) {
+            echo '<tr>';
+            echo '<td>' . $subject["subjectName"] . '</td>';
+            echo '<td>' . $subject["subjectGrade"] . '</td>';
+            echo '<td>' . $subject["subjectStatus"] . '</td>';
+            echo '</tr>';
+        }
+
+        echo '</table>';
+    }
 }
 
