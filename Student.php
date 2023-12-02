@@ -42,5 +42,30 @@ class Student
             "subjectStatus" => $subjectStatus
         ];
     }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getNumber()
+    {
+        return $this->number;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function getProgram()
+    {
+        return $this->program;
+    }
+
+    public function getSubjectList()
+    {
+        return $this->subjectList;
+    }
 }
 
