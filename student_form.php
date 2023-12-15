@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<form action="student_class.php" method="post" class="card">
+<form action="student.php" method="post" class="card">
     <h1>Student Form</h1>
     <table>
         <tr>
@@ -33,30 +33,16 @@
             <th>Subject Name</th>
             <th>Grade</th>
         </tr>
+        <?php for ($i = 1; $i <=3; $i++): ?>
         <tr>
             <td><label>
-                <input type="text" name="subjectName[]" required />
+                <input type="text" name="subjectName<?= $i ?>" required/>
             </label></td>
             <td><label>
-                <input type="text" name="grade[]" required />
+                <input type="text" name="subjectGrade<?= $i ?>" required/>
             </label></td>
         </tr>
-        <tr>
-            <td><label>
-                <input type="text" name="subjectName[]" required />
-            </label></td>
-            <td><label>
-                <input type="text" name="grade[]" required />
-            </label></td>
-        </tr>
-        <tr>
-            <td><label>
-                <input type="text" name="subjectName[]" required />
-            </label></td>
-            <td><label>
-                <input type="text" name="grade[]" required />
-            </label></td>
-        </tr>
+        <?php endfor; ?>
     </table>
 
     <input type="submit" value="Submit">

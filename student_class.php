@@ -13,92 +13,89 @@ class student_class
     private string $program;
     private array $subjectList;
 
-    public function setName($name)
+    public function setName($name): void
     {
         $this->name = $name;
     }
 
-    public function setNumber($number)
+    public function setNumber($number): void
     {
         $this->number = $number;
     }
 
-    public function setEmail($email)
+    public function setEmail($email): void
     {
         $this->email = $email;
     }
 
-    public function setProgram($program)
+    public function setProgram($program): void
     {
         $this->program = $program;
     }
 
-    public function setSubjectList($subjectName, $subjectGrade)
+    public function setSubjectList(array $subjectList): void
     {
-        $subjectStatus = ($subjectGrade < 9.5) ? 'Disapproved' : 'Approved';
-        $this->subjectList[] = [
-            "subjectName" => $subjectName,
-            "subjectGrade" => $subjectGrade,
-            "subjectStatus" => $subjectStatus
-        ];
+        $this->subjectList = $subjectList;
     }
 
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function getNumber()
+    public function getNumber(): string
     {
         return $this->number;
     }
 
-    public function getEmail()
+    public function getEmail(): string
     {
         return $this->email;
     }
 
-    public function getProgram()
+    public function getProgram(): string
     {
         return $this->program;
     }
 
-    public function getSubjectList()
+    public function getSubjectList(): array
     {
         return $this->subjectList;
     }
 
-    public function printStudentSubjects($subjectList)
+    public function printStudentSubjects(): void
     {
-        if (empty($subjectList)) {
+        if (empty($this->subjectList)) {
             echo 'No subjects available in the list';
             return;
         }
 
-        echo '<table border="1">';
+        echo '<table>';
         echo '<tr><th>Subject</th><th>Grade</th><th>Status</th></tr>';
 
-        foreach ($subjectList as $subject) {
+        foreach ($this->subjectList as $subject) {
             echo '<tr>';
             echo '<td>' . $subject["subjectName"] . '</td>';
             echo '<td>' . $subject["subjectGrade"] . '</td>';
             echo '<td>' . $subject["subjectStatus"] . '</td>';
             echo '</tr>';
         }
-
         echo '</table>';
     }
 
-    public function subjectGradesAverage($subjectGrade) {
+    public function subjectGradesAverage($subjectGrade): float|int
+    {
         if (empty($subjectGrade)) {
             return 0;
         }
 
         $totalGrades = 0;
         foreach ($subjectGrade as $grade) {
-            $totalGrades += $grade['subjectGrade'];
+            if ($grade >= 9.5) {
+                $totalGrades += $grade['subjectGrade'];
+            }
         }
-        return $totalGrades / count($subjectGrade);
+        $average = $totalGrades / count($subjectGrade);
+        return round($average, 2);
     }
 }
-
