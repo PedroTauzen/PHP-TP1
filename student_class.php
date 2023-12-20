@@ -90,12 +90,20 @@ class student_class
         }
 
         $totalGrades = 0;
+        $countGrades = 0;
+
         foreach ($subjectGrade as $grade) {
-            if ($grade >= 9.5) {
+            if (isset($grade['subjectGrade']) && $grade['subjectGrade'] >= 9.5) {
                 $totalGrades += $grade['subjectGrade'];
+                $countGrades++;
             }
         }
-        $average = $totalGrades / count($subjectGrade);
+
+        if ($countGrades === 0) {
+            return 0;
+        }
+
+        $average = $totalGrades / $countGrades;
         return round($average, 2);
     }
 }
